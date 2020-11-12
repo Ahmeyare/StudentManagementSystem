@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -149,8 +149,8 @@ EMAIL_FILE_PATH=os.path.join(BASE_DIR,"sent_mails")
 # DEFAULT_FROM_EMAIL="Student management System <GMAIl_EMAIL>"
 #
 
-#Enable Only Making Project Live on Heroku
-#STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
-#import dj_database_url
-#prod_db=dj_database_url.config(conn_max_age=500)
-#DATABASES['default'].update(prod_db)
+Enable Only Making Project Live on Heroku
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+import dj_database_url
+prod_db=dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
